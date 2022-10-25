@@ -35,6 +35,35 @@ let h1Text = [];
 let h2Text = ['freelancer','studio'];
 let pText = [];
 let h3Text = [];
+/*
+важная функция для создания элементов DOM дерева
+Аргументы: 
+1.Название переменной, 2.Тэг элемента, 
+3.Значение внутри тэга, 4.Порядковый номер дочернего элемента
+
+НЕ РАБОТАЕТ!!! точнее работает, но не задает переменную в массив 
+и не применяются классы с цветом текста
+*/
+
+/* раскомментить по желанию
+function addChild (variable, element, value, number) {
+	variable = document.createElement(element);
+	variable.innerHTML = value;
+	divChild[number].appendChild(variable);
+	return variable[number]
+}
+for (let i = 2; i < 4; i++){
+	addChild(h1Text[i],'h1','Initially designet to', i)
+	addChild(h2Text[i],'h2',h2Text[i-2], i)
+}
+for (let i = 1; i < 4; i++){
+	addChild(pText[i],'p',textBut, i)
+}
+for (let i = 2; i < 4; i++){
+	addChild(h3Text[i],'h3','Start here', i)
+};
+*/
+
 for (let i = 1; i < 4; i++){ //цикл перебора дочерих элементов
 	if (i > 1) { //условие проверки на первый дочерний элемент
 		//заголовки H2
@@ -58,9 +87,9 @@ for (let i = 1; i < 4; i++){ //цикл перебора дочерих элем
 	};
 };
 //класс - цвет текста
-h2Text[2].classList.add('gray');
 pText[1].classList.add('gray');
 pText[2].classList.add('gray');
+h2Text[2].classList.add('gray');
 h2Text[3].classList.add('yellow');
 
 //список стилей, адаптивная верстка по grid-модели
